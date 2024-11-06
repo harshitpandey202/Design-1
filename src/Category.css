@@ -1,0 +1,126 @@
+/* Main container for the section */
+.cat-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header (title and subtitle) styling */
+  .cat-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .cat-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .cat-subtitle {
+    font-size: 1rem;
+    color: grey;
+    margin-top: 10px;
+  }
+  
+  /* Deck container for the cards */
+  .cat-deck {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap into multiple rows */
+    gap: 20px; /* Space between the cards */
+    justify-content: space-between; /* Distribute space between cards */
+    
+  }
+  
+  /* Individual card styling */
+  .cat-card {
+    width: 22%; /* Each card takes 22% width of the row */
+    border-radius: 10px;
+    border: 1px solid rgb(175, 172, 172);
+    height: 270px;
+    box-shadow: 0 4px 10px rgba(160, 157, 157, 0.1);
+    border-radius: 100% / 70%;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .cat-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Card image styling */
+  .cat-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+
+    /* Crop the image to fit the container */
+  }
+  
+  /* Title and subtitle inside the card */
+  .cat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 15px 0 10px;
+  }
+  
+  .cat-card-subtitle {
+    font-size: 1rem;
+    color: #777;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+.z1{
+    width: 100px;
+    height: 100px;
+    margin-left: 2px;
+    border-radius: 100%;
+    margin-top: 18px;
+  
+}
+.cat-back{
+    
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin-left: 65px;
+    margin-top: 20px;
+}
+.z2{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 18px;
+    border-radius: 100%;
+  
+}
+.z3{
+    width: 100px;
+    height: 130px;
+    margin-left: 10px;
+    margin-top: 22px;
+    border-radius: 100%;
+  
+}
+.z4{
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    margin-top: 19px;
+    border-radius: 100%;
+  
+}
+.x1{
+    background-color: purple;
+}
+.x2{
+    background-color: pink;
+}
+.x3{
+    background-color: rgb(223, 223, 95);
+}
+.x4{
+    background-color: rgb(107, 201, 107);
+}

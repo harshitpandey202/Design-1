@@ -1,0 +1,82 @@
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the left and right sections */
+    align-items: flex-start; /* Aligns the content at the top of the footer */
+    padding: 20px;
+    background-color: white;
+    color: black;
+  }
+  
+  /* Left section (logo and description) */
+  .footer-left {
+    display: flex;
+    flex-direction: column; /* Stacks logo and description vertically */
+    justify-content: center;
+    align-items: flex-start; /* Aligns content to the left */
+    width: 50%;
+    margin-left: 20px;
+  }
+  
+  .footer-logo {
+    width: 150px; /* Adjust width of the logo */
+    height: auto;
+    
+  }
+  
+  .footer-description {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: black; /* Lighter text for description */
+  }
+  
+  /* Right section (social icons and links) */
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between the social icons and links */
+    align-items: flex-end; /* Aligns to the right */
+    width: 50%;
+    text-align: right;
+    margin-right: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Social icons row */
+  .footer-social-icons {
+    display: flex;
+    justify-content: flex-end; /* Aligns icons to the right */
+    margin-bottom: 15px;
+    margin-right: 10px;
+  }
+  
+  .footer-icon {
+    margin: 0 10px;
+    display: inline-block;
+    width: 30px; /* Set icon size */
+    height: 30px;
+  }
+  
+  .footer-icon img {
+    width: 100%; /* Ensures icons fit within their container */
+    height: auto;
+  }
+  
+  /* Footer links row */
+  .footer-links {
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+  }
+  
+  .footer-link {
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+
+  

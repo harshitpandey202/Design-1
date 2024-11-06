@@ -1,0 +1,131 @@
+/* Main container for the about section */
+.about-container {
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Space between the left and right section */
+    align-items: center; /* Align items at the start of the container */
+   gap: 60px;
+   margin:10px;
+
+  }
+  
+  /* Left side: Images */
+  .about-left {
+    display: flex;
+    flex-direction: row; /* Stack the images vertically */
+    gap: 5px; /* Space between images */
+
+  }
+  
+  .about-image {
+    
+  width: 150px;
+  height: 250px;
+  border-radius: 30px; /* Optional: Add rounded corners */
+  }
+  
+  /* Right side: Title, sub-para, and button */
+  .about-right {
+    display: flex;
+    flex-direction: column; /* Stack title, sub-para, and button vertically */
+    gap: 15px;
+
+  }
+  
+  .about-title {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .about-subpara {
+    font-size: 1rem;
+    color:black;
+
+  }
+  .about-nextpara{
+    font-size: 1rem;
+    color:black;
+    font-weight: 600;
+  }
+  
+  .about-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(199, 197, 197);
+    box-shadow: 0 0 10px gray;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .about-btn:hover{
+    background-color: rgb(207, 168, 207);
+  }
+  .about-btmn{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .i1{
+    margin-left: 10px;
+    width: 180px;
+    
+  }
+  .i2{
+   
+    margin-left: 20px;
+  }
+  .i3{
+    margin-left: 20px;
+ 
+  }
+  .About1-para{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+  }
+.about-arrow{
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 100%;
+    padding: 10px;
+    
+
+  
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.d1{
+    background-color:palevioletred ;
+    border-radius: 30px;
+    width: 200px;
+ 
+}
+.d2{
+    background-color:rgb(155, 102, 155) ;
+    border-radius: 30px;
+    width: 200px;
+}
+.d3{
+    background-color:rgb(221, 221, 44) ;
+    border-radius: 30px;
+    width: 200px;
+}
+.arrow-margin{
+    width:40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 70px;
+   
+}

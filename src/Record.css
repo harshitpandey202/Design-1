@@ -1,0 +1,102 @@
+/* Main container */
+.record-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header (title and subtitle) */
+  .record-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .record-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .record-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  /* Third part: Left and Right sections */
+  .record-third {
+    display: flex;
+    justify-content: space-between;
+    gap: 00px;
+  }
+  
+  /* Left side with main image */
+  .record-left {
+    flex: 1;  /* Make the left section take equal width */
+  }
+  
+  .record-main-image {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Right side with profile, description, and small image */
+  .record-right {
+    flex: 1;  /* Make the right section take equal width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between profile and small image */
+  }
+  
+  /* Profile section inside right side */
+  .record-profile {
+    
+    position: absolute;
+    gap: 10px;
+  }
+  
+  .record-profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the profile photo fits well inside the circle */
+    float: left;
+  }
+  
+  .record-description {
+    font-size: 1.4rem;
+    color: #555;
+    margin-top: 5px;
+    clear: both;
+    margin: 10px;
+    margin-top: 30px;
+  }
+  
+  /* Small image section */
+  .record-small-image {
+    display: flex;
+    justify-content: center; /* Center the small image */
+  }
+  
+  .record-small-img {
+   width: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+    top: 200px;
+     right: 230px;
+   
+
+    justify-content: left;
+  }
+  .name{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-top: 14px;
+  }
+  .position{
+    font-size: 1.1rem;
+    color: rgb(170, 166, 166);
+    font-weight: 600;
+  }

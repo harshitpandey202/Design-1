@@ -1,0 +1,58 @@
+/* CenterContent.css */
+.center-container {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    
+    align-items: center; /* Center horizontally */
+    
+    text-align: center; /* Center the text */
+    margin-top: 50px;
+  }
+  
+  .heading {
+    font-size: 4rem; /* Larger text for the heading */
+    margin-bottom: 10px; /* Space between heading and the small text */
+    font-weight: 600;
+    width: 60%;
+    position: relative;
+  }
+  
+  .small-text {
+    font-size: 1rem; /* Smaller text */
+    margin-bottom: 20px; /* Space between the small text and the button */
+    width: 25%;
+    margin-top: 10px;
+  }
+  
+  .action-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: rgb(204, 106, 204);
+    color: black;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+  
+    text-align: left;
+   display:flex ;
+   flex-direction: row;
+  }
+   .action-btn p{
+font-weight: 900;
+   }
+    
+    .arrow img{
+      background-color: white;
+      width: 40px;
+      height: 25px;
+      border-radius: 100%;
+      margin-left: 10px;
+      padding-top: 0;
+      padding: 2px;
+      
+      
+    }
+  
+  
+  
