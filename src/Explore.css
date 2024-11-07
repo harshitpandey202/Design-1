@@ -1,4 +1,6 @@
-.main{
+/* Explore.css */
+
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,54 +9,131 @@
     padding: 20px;
     background-color: rgb(223, 203, 223);
     gap: 20px;
-    
-}
-.expore-heading{
-    font-size: 4rem;
-}
-.explore-subhead{
-  font-size: 1rem;
+  }
   
-}
-.cards{
+  .expore-heading {
+    font-size: 4rem; /* Larger text for heading */
+  }
+  
+  .explore-subhead {
+    font-size: 1rem;
+    color: grey;
+  }
+  
+  .cards {
     display: flex;
     flex-direction: row;
     gap: 30px;
-    
-width: 80%;
-margin-left: 10%;
-
-}
-.card{
-   background-color: white;
-   height: 250px;
-   border-radius: 20px;
-   transition: 0.3s;
+    width: 80%;
+    margin-left: 10%;
+    justify-content: space-between; /* Adjust spacing between cards */
+  }
   
-
-}
-.card img{
+  .card {
+    background-color: white;
+    height: 250px;
+    width: 22%; /* Adjust card width */
+    border-radius: 20px;
+    transition: 0.3s;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card img {
     border-radius: 100%;
     margin-bottom: 10px;
-    margin-top: 40px;
-}
-
+    margin-top: 20px;
+    width: 40px; /* Fixed width for images */
+    height: 40px; /* Fixed height for images */
+  }
   
-  
-    
-
-.expore-title{
+  .expore-title {
     font-weight: 600;
     font-size: 22px;
     margin-top: 10px;
-
-}
-.expore-subhead{
+  }
+  
+  .expore-subhead {
     font-size: 14px;
     font-weight: 200;
+    color: grey;
     padding: 20px;
-}
-.card:hover{
+  }
+  .expore-subhead:hover{
+    color: white;
+  }
+  
+  /* Card hover effect */
+  .card:hover {
     background-color: rgb(148, 40, 148);
     color: white;
-}
+  }
+  
+  @media (max-width: 768px) {
+    .expore-heading {
+      font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+  
+    .explore-subhead {
+      font-size: 1rem; /* Adjust font size for subheading */
+      width: 80%;
+      margin-left: 10%;
+    }
+  
+    .cards {
+      flex-direction: column; /* Stack the cards vertically */
+      gap: 20px;
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    .card {
+      width: 100%; /* Full width for each card on smaller screens */
+      height: auto; /* Adjust card height to fit content */
+      padding: 15px;
+    }
+  
+    .card img {
+      width: 60px; /* Smaller image size for mobile */
+      height: 60px;
+    }
+  
+    .expore-title {
+      font-size: 18px; /* Reduce title font size */
+    }
+  
+    .expore-subhead {
+      font-size: 12px; /* Reduce subheading font size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .expore-heading {
+      font-size: 2rem; /* Smaller heading for very small screens */
+    }
+  
+    .cards {
+      width: 100%;
+      margin-left: 0; /* Remove margin for very small screens */
+    }
+  
+    .card {
+      width: 100%; /* Ensure cards take full width */
+      height: auto;
+      padding: 10px;
+    }
+  
+    .card img {
+      width: 50px; /* Further reduce image size for smaller screens */
+      height: 50px;
+    }
+  
+    .expore-title {
+      font-size: 16px; /* Reduce title size for small screens */
+    }
+  
+    .expore-subhead {
+      font-size: 12px; /* Reduce subheading size */
+    }
+  }
+  

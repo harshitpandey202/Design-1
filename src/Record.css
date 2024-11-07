@@ -1,102 +1,227 @@
 /* Main container */
 .record-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header (title and subtitle) */
-  .record-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .record-title {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .record-subtitle {
-    font-size: 1.2rem;
-    color: #777;
-  }
-  
-  /* Third part: Left and Right sections */
-  .record-third {
-    display: flex;
-    justify-content: space-between;
-    gap: 00px;
-  }
-  
-  /* Left side with main image */
-  .record-left {
-    flex: 1;  /* Make the left section take equal width */
-  }
-  
-  .record-main-image {
-    width: 90%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* Right side with profile, description, and small image */
-  .record-right {
-    flex: 1;  /* Make the right section take equal width */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between profile and small image */
-  }
-  
-  /* Profile section inside right side */
-  .record-profile {
-    
-    position: absolute;
-    gap: 10px;
-  }
-  
-  .record-profile-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the profile photo fits well inside the circle */
-    float: left;
-  }
-  
-  .record-description {
-    font-size: 1.4rem;
-    color: #555;
-    margin-top: 5px;
-    clear: both;
-    margin: 10px;
-    margin-top: 30px;
-  }
-  
-  /* Small image section */
-  .record-small-image {
-    display: flex;
-    justify-content: center; /* Center the small image */
-  }
-  
-  .record-small-img {
-   width: 100px;
-    border-radius: 8px;
-    object-fit: cover;
-    display: flex;
-    position: relative;
-    top: 200px;
-     right: 230px;
-   
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    justify-content: left;
+/* Header (title and subtitle) */
+.record-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.record-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.record-subtitle {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Third part: Left and Right sections */
+.record-third {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between left and right sections */
+}
+
+/* Left side with main image */
+.record-left {
+  flex: 1;  /* Make the left section take equal width */
+}
+
+.record-main-image {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right side with profile, description, and small image */
+.record-right {
+  flex: 1;  /* Make the right section take equal width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between profile and small image */
+  position: relative;
+}
+
+/* Profile section inside right side */
+.record-profile {
+  position: relative;
+  gap: 10px;
+}
+
+.record-profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the profile photo fits well inside the circle */
+  float: left;
+}
+
+.record-description {
+  font-size: 1.4rem;
+  color: #555;
+  margin-top: 5px;
+  margin: 10px;
+  clear: both;
+}
+
+/* Small image section */
+.record-small-image {
+  display: flex;
+  justify-content: center; /* Center the small image */
+}
+
+.record-small-img {
+  width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  margin-top: 10px;
+}
+
+/* Name and position */
+.name {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-top: 14px;
+}
+
+.position {
+  font-size: 1.1rem;
+  color: rgb(170, 166, 166);
+  font-weight: 600;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For Tablets and Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .record-title {
+    font-size: 2.5rem; /* Smaller font size for the title */
   }
-  .name{
-    font-size: 1.3rem;
-    font-weight: 900;
-    margin-top: 14px;
+
+  .record-subtitle {
+    font-size: 1rem; /* Smaller subtitle font */
+    text-align: center;
   }
-  .position{
-    font-size: 1.1rem;
-    color: rgb(170, 166, 166);
-    font-weight: 600;
+
+  .record-third {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    align-items: center;
   }
+
+  /* Left section (image) */
+  .record-left {
+    margin-bottom: 20px;
+  }
+
+  .record-main-image {
+    width: 100%; /* Make image responsive */
+    height: auto;
+  }
+
+  /* Right section (profile and small image) */
+  .record-right {
+    position: relative;
+    width: 90%;
+  }
+
+  .record-profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .record-profile-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+
+  .record-description {
+    font-size: 1.1rem; /* Slightly smaller text on tablet */
+  }
+
+  .record-small-image {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .record-small-img {
+    width: 80px;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .name,.position{
+    text-align: left;
+  }
+}
+
+/* For Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .record-container {
+    padding: 10px; /* Reduce padding on mobile */
+  }
+
+  .record-header {
+    margin-bottom: 20px;
+  }
+
+  .record-title {
+    font-size: 1.8rem; /* Smaller title for mobile */
+  }
+
+  .record-subtitle {
+    font-size: 0.9rem; /* Even smaller subtitle font */
+    text-align: center;
+  }
+
+  .record-third {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    gap: 20px;
+  }
+
+  .record-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .record-main-image {
+    width: 100%; /* Ensure image fits on mobile */
+    height: auto;
+  }
+
+  .record-right {
+    width: 100%;
+    text-align: center; /* Center the content on the right */
+  }
+
+  .record-profile {
+    margin-bottom: 15px;
+  }
+
+  .record-profile-photo {
+    width: 70px;
+    height: 70px; /* Smaller profile image */
+    
+  }
+
+  .record-description {
+    font-size: 1rem; /* Smaller font for the description */
+  }
+
+  .record-small-img {
+    width: 70px; /* Reduce the size of the small image */
+    margin-top: 10px;
+  }
+}

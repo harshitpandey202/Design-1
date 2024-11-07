@@ -1,105 +1,184 @@
 /* Main container for the banner layout */
 .banner-container {
-    display: flex; /* Use Flexbox to layout the children side by side */
-    justify-content: center;
-    align-items: center; /* Align items at the top */
-    width: 95%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: rgb(192, 83, 192);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgb(192, 83, 192);
   margin-left: 35px;
-    
-  
-    border-radius: 10px;
-    color: white;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Left part */
+.banner-left {
+  position: relative;
+  width: 30%; /* Adjust width of the left section */
+}
+
+.banner-small-image-left {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  width: 80px; /* Adjust the size of the image */
+  height: auto;
+  z-index: 1;
+}
+
+.left-img {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  top: 38px;
+  left: 25px;
+}
+
+/* Center part */
+.banner-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%; /* Adjust width of the center section */
+  text-align: center;
+}
+
+.banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-description {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.banner-btn {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+  background-color: rgb(170, 84, 170);
+}
+
+/* Right part */
+.banner-right {
+  position: relative;
+  width: 30%; /* Adjust width of the right section */
+}
+
+.banner-small-image-right {
+  position: absolute;
+  top: -55px;
+  right: 10px;
+  width: 140px; /* Adjust the size of the image */
+  height: auto;
+  z-index: 1;
+}
+
+.right-img {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  top: 38px;
+  right: 48px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* For Tablets and Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .banner-container {
+    flex-direction: column; /* Stack the sections vertically */
+    text-align: center; /* Center the text */
+    width: 100%;
+    padding: 15px;
   }
 
-  
-  /* Left part */
-  .banner-left {
-    position: relative; /* Positioning context for the small image */
-    width: 30%; /* Adjust width of the left section */
+  .banner-left, .banner-center, .banner-right {
+    width: 100%; /* Full width for each section */
+    margin-bottom: 20px; /* Add space between stacked sections */
   }
-  
-  .banner-small-image-left {
-    position: absolute;
-    top: -30px;
-    left: 30px;
-    width: 80px; /* Adjust the size of the image */
-    height: auto;
-    z-index: 1;
-  }
-  
-  /* Center part */
-  .banner-center {
-    display: flex;
-    flex-direction: column; /* Arrange items in a column */
-    justify-content: center;
-    align-items: center; /* Center all content horizontally */
-    width: 40%; /* Adjust width of the center section */
-    text-align: center;
-  }
-  
+
+  /* Title and description adjustments */
   .banner-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Smaller title */
   }
-  
+
   .banner-description {
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Adjust description font size */
   }
-  
+
   .banner-btn {
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
 
+  /* Left and right image adjustments */
+  .banner-small-image-left, .banner-small-image-right {
+    width: 60px; /* Smaller images */
+    top: -20px;
   }
-  
-  .banner-btn:hover {
-    background-color: rgb(170, 84, 170);
-  }
-  
-  /* Right part */
-  .banner-right {
-    position: relative;
-    width: 30%; /* Adjust width of the right section */
-  }
-  
-  .banner-small-image-right {
-    position: absolute;
-    top: -55px;
-    right: 10px;
-    width: 140px; /* Adjust the size of the image */
-    height: auto;
-    z-index: 1;
-  }
-.left-img{
-    border: 1px solid white;
-    border-radius: 100%;
-    width: 80px;
-    height: 50px;
-    position: absolute;
-    top: 38px;
-    left: 25px;
 
+  .left-img, .right-img {
+    width: 60px; /* Adjust the size of the circles */
+    height: 40px;
+  }
 }
-.right-img{
-    border: 1px solid white;
-    border-radius: 100%;
-    width: 80px;
-    height: 50px;
-    position: absolute;
-    top: 38px;
-    right: 48px;
 
+/* For Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .banner-container {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .banner-title {
+    font-size: 1.2rem; /* Smaller title for mobile */
+  }
+
+  .banner-description {
+    font-size: 0.8rem; /* Adjust description font size */
+  }
+
+  .banner-btn {
+    padding: 8px 15px; /* Smaller button */
+    font-size: 0.9rem;
+  }
+
+  .banner-small-image-left, .banner-small-image-right {
+    width: 50px; /* Even smaller images */
+    top: -10px;
+  }
+  .banner-small-image-right{
+    width: 90px;
+    top: -24px;
+    left: 10px;
+  
+  }
+
+  .left-img, .right-img {
+    width: 50px; /* Adjust the size of the circles */
+    height: 35px;
+  }
+  
+
+  /* Center part adjustments for mobile */
+  .banner-center {
+    width: 100%; /* Full width for the center section */
+  }
 }
-  
-  

@@ -1,58 +1,103 @@
-/* CenterContent.css */
+/* Hero.css */
+
 .center-container {
-    display: flex;
-    flex-direction: column; /* Stack the elements vertically */
-    
-    align-items: center; /* Center horizontally */
-    
-    text-align: center; /* Center the text */
-    margin-top: 50px;
-  }
-  
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center the text */
+  margin-top: 50px;
+}
+
+.heading {
+  font-size: 4rem; /* Larger text for the heading */
+  margin-bottom: 10px; /* Space between heading and the small text */
+  font-weight: 600;
+  width: 60%; /* Adjust width for better alignment */
+  position: relative;
+}
+
+.small-text {
+  font-size: 1rem; /* Smaller text */
+  margin-bottom: 20px; /* Space between the small text and the button */
+  width: 40%; /* Adjust width for better alignment */
+  margin-top: 10px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(204, 106, 204);
+  color: black;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically */
+}
+
+.action-btn p {
+  font-weight: 900;
+}
+
+.arrow img {
+  background-color: white;
+  width: 40px;
+  height: 25px;
+  border-radius: 100%;
+  margin-left: 10px;
+  padding: 2px;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
   .heading {
-    font-size: 4rem; /* Larger text for the heading */
-    margin-bottom: 10px; /* Space between heading and the small text */
-    font-weight: 600;
-    width: 60%;
-    position: relative;
+    font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    width: 80%; /* Increase width to use more available space */
   }
-  
+
   .small-text {
-    font-size: 1rem; /* Smaller text */
-    margin-bottom: 20px; /* Space between the small text and the button */
-    width: 25%;
-    margin-top: 10px;
+    font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    width: 75%; /* Increase width for better spacing */
   }
-  
+
   .action-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: rgb(204, 106, 204);
-    color: black;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    border-radius: 50px;
-  
-    text-align: left;
-   display:flex ;
-   flex-direction: row;
+    padding: 8px 16px;
+    font-size: 0.9rem; /* Smaller button text */
+    width: 60%; /* Make button width responsive */
+    justify-content: center; /* Center the button content */
   }
-   .action-btn p{
-font-weight: 900;
-   }
-    
-    .arrow img{
-      background-color: white;
-      width: 40px;
-      height: 25px;
-      border-radius: 100%;
-      margin-left: 10px;
-      padding-top: 0;
-      padding: 2px;
-      
-      
-    }
-  
-  
-  
+
+  .arrow img {
+    width: 30px; /* Smaller arrow for mobile */
+    height: 20px;
+  }
+}
+
+/* Very small screens (like smaller mobile devices) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem; /* Reduce heading size even further */
+    width: 90%; /* Maximize width for small screens */
+  }
+
+  .small-text {
+    font-size: 0.8rem; /* Make text even smaller */
+    width: 90%; /* Maximize width */
+    margin-bottom: 15px;
+  }
+
+  .action-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem; /* Smaller text for the button */
+    width: 80%; /* Increase button width */
+    justify-content: center; /* Center content */
+  }
+
+  .arrow img {
+    width: 25px; /* Even smaller arrow */
+    height: 15px;
+  }
+}

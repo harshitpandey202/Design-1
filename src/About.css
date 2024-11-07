@@ -1,131 +1,259 @@
 /* Main container for the about section */
 .about-container {
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Space between the left and right section */
-    align-items: center; /* Align items at the start of the container */
-   gap: 60px;
-   margin:10px;
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Space between the left and right section */
+  align-items: flex-start; /* Align items at the top of the container */
+  gap: 60px;
+  margin: 20px;
+}
 
-  }
-  
-  /* Left side: Images */
-  .about-left {
-    display: flex;
-    flex-direction: row; /* Stack the images vertically */
-    gap: 5px; /* Space between images */
+/* Left side: Images */
+.about-left {
+  display: flex;
+  flex-direction: row; /* Stack the images vertically */
+  gap: 10px; /* Space between images */
+}
 
-  }
-  
-  .about-image {
-    
+.about-image {
   width: 150px;
   height: 250px;
   border-radius: 30px; /* Optional: Add rounded corners */
+}
+
+.about-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-subpara,
+.about-nextpara {
+  font-size: 1rem;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-nextpara {
+  font-weight: 600;
+}
+
+.about-btn {
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(199, 197, 197);
+  box-shadow: 0 0 10px gray;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background-color: rgb(207, 168, 207);
+}
+
+.about-btmn {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.i1,
+.i2,
+.i3 {
+  margin-left: 20px;
+}
+
+.About1-para {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.about-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.d1 {
+  background-color: palevioletred;
+  border-radius: 30px;
+  width: 200px;
+}
+
+.d2 {
+  background-color: rgb(155, 102, 155);
+  border-radius: 30px;
+  width: 200px;
+}
+
+.d3 {
+  background-color: rgb(221, 221, 44);
+  border-radius: 30px;
+  width: 200px;
+}
+
+.arrow-margin {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-left: 70px;
+}
+
+/* --- Media Queries for responsiveness --- */
+
+/* For Tablets and Smaller Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack left and right sections vertically */
+    gap: 30px;
+    margin: 10px;
   }
-  
-  /* Right side: Title, sub-para, and button */
-  .about-right {
-    display: flex;
-    flex-direction: column; /* Stack title, sub-para, and button vertically */
+
+  .about-left {
+    flex-direction: column;
     gap: 15px;
-
+    align-items: center;
   }
-  
+
   .about-title {
-    font-size: 4rem;
-    font-weight: bold;
+    font-size: 2.5rem; /* Smaller font size for the title */
   }
-  
-  .about-subpara {
-    font-size: 1rem;
-    color:black;
 
+  .about-subpara,
+  .about-nextpara {
+    font-size: 0.9rem; /* Smaller font size for paragraphs */
+    text-align: center;
   }
-  .about-nextpara{
-    font-size: 1rem;
-    color:black;
-    font-weight: 600;
-  }
-  
+
   .about-btn {
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
-    border: 1px solid rgb(199, 197, 197);
-    box-shadow: 0 0 10px gray;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: 0.3s;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  .about-btn:hover{
-    background-color: rgb(207, 168, 207);
+
+  .about-image {
+    width: 120px; /* Smaller images for tablets */
+    height: 200px;
   }
-  .about-btmn{
-    display: flex;
+
+  .i1,
+  .i2,
+  .i3 {
+    margin-left: 0;
+    width: 120px; /* Adjust image widths */
+  }
+
+  .about-arrow {
+    width: 30px;
+    height: 30px; /* Smaller arrow icon */
+    padding: 8px;
+  }
+
+  .arrow-margin {
+    margin-left: 50px; /* Adjust margin for better spacing */
+  }
+
+  .about-btmn {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+
+  .d1,
+  .d2,
+  .d3 {
+    width: 150px; /* Smaller card width */
+    height: 250px;
+  }
+
+  .About1-para {
+    font-size: 1.2rem; /* Smaller text for the image labels */
+  }
+}
+
+/* For Smaller Screens (Mobile - max-width: 480px) */
+@media (max-width: 480px) {
+  .about-container {
+    margin: 5px;
+  }
+
+  .about-left {
+    gap: 10px;
+    align-items: center;
     flex-direction: row;
-    gap: 20px;
+    flex-wrap: wrap;
   }
-  .i1{
-    margin-left: 10px;
-    width: 180px;
-    
+
+  .about-title {
+    font-size: 2rem; /* Even smaller font size for mobile */
+  }
+
+  .about-subpara,
+  .about-nextpara {
+    font-size: 0.8rem; /* Smaller font size for paragraphs */
+    text-align: center;
+  }
+
+  .about-btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .about-image {
+    width: 100px; /* Even smaller images */
+    height: 170px;
+  }
+
+  .i1,
+  .i2,
+  .i3 {
+    margin-left: 0;
+    width: 100px; /* Adjust image widths for small screens */
   }
   .i2{
-   
-    margin-left: 20px;
+    height: 135px;
   }
-  .i3{
-    margin-left: 20px;
- 
-  }
-  .About1-para{
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 10px;
-  }
-.about-arrow{
-    width: 40px;
-    height: 40px;
-    
-    border-radius: 100%;
-    padding: 10px;
-    
 
-  
-}
-.about{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.d1{
-    background-color:palevioletred ;
-    border-radius: 30px;
-    width: 200px;
- 
-}
-.d2{
-    background-color:rgb(155, 102, 155) ;
-    border-radius: 30px;
-    width: 200px;
-}
-.d3{
-    background-color:rgb(221, 221, 44) ;
-    border-radius: 30px;
-    width: 200px;
-}
-.arrow-margin{
-    width:40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 100%;
-    margin-bottom: 5px;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    margin-left: 70px;
-   
+  .about-arrow {
+    width: 55px;
+    height: 25px; /* Even smaller arrow icon */
+    padding: 6px;
+  }
+
+  .arrow-margin {
+    margin-left: 40px; /* Adjust margin */
+  }
+
+  .about-btmn {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 5px;
+  }
+
+  .d1,
+  .d2,
+  .d3 {
+    width: 120px; /* Even smaller card width */
+    height: 220px;
+    
+  }
+
+  .About1-para {
+    font-size: 1rem; /* Reduce the font size further */
+  }
 }

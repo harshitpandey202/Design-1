@@ -1,58 +1,112 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    background-color: transparent;
-    color: black;
-    gap: 270px;
-    
-  }
-  
-  .logodiv img {
-    
-    height: 90px;
-    display: flex;
-    align-items: center;
 
-   
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Updated: ensures items are spaced evenly */
+  align-items: center;
+  padding: 10px 20px; /* Added padding for better spacing */
+  background-color: transparent;
+  color: black;
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.logodiv img {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 30px;
+  flex: 2;
+  justify-content: center; /* Ensure center items are centered */
+}
+
+.navbar-center a {
+  color: grey;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.navbar-center a:hover {
+  color: black;
+  font-weight: 900;
+}
+
+.navbar-right {
+  flex: 1;
+  text-align: right;
+}
+
+.navbar-right .login-btn {
+  padding: 8px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50px;
+  width: 100px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-right .login-btn:hover {
+  background-color: #333; /* Slight darkening on hover */
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+    padding: 10px;
   }
-  
+
   .navbar-center {
-    display: flex;
-    gap: 30px;
-    
+    flex-direction: column; /* Stack links vertically on mobile */
+    gap: 15px;
   }
-  
+
+  .navbar-left, .navbar-right {
+    flex: 0 0 auto;
+  }
+
   .navbar-center a {
-    color: grey;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    transition: 0.3s;
+    font-size: 18px; /* Slightly smaller text for mobile */
   }
-  
-  .navbar-center a:hover {
-    color: black;
-    font-weight: 900;
-  }
-  
+
   .navbar-right .login-btn {
-    padding: 8px 15px;
-    background-color: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 50px;
-    width: 100px;
-    font-weight: 600;
+    width: 120px; /* Adjust button width for better mobile look */
   }
-  
- 
+}
+
+/* Very small screens (like smaller mobile devices) */
+@media (max-width: 480px) {
+  .navbar-center {
+    gap: 10px; /* Reduce space between links on smaller screens */
+  }
+
+  .navbar-center a {
+    font-size: 16px; /* Make text smaller on very small screens */
+  }
+
+  .navbar-right .login-btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .logodiv img {
+    height: 70px; /* Reduce logo size on smaller screens */
+  }
+}
